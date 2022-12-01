@@ -1,6 +1,15 @@
 # TextObject
 With text object you can display text in the scene.
 
+## Available methods
+### getTextDimensions
+```typescript
+/**
+ * Get text dimensions in pixels
+ */
+public getTextDimensions(): { width: number; height: number };
+```
+
 ## Example
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
