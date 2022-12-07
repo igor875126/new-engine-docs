@@ -1,5 +1,6 @@
 - Core
     - [Time](documentation/Core/Time.md)
     - [Event Manager](documentation/Core/EventManager.md)
+    - [Camera](documentation/Core/Camera.md)
 - Objects
     - [TextObject](documentation/Objects/TextObject.md)
