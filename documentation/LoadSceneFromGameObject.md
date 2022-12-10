@@ -23,14 +23,12 @@ export default class Player extends SpriteObject {
     public position: Vector2 = new Vector2(250, 250);
     public collider: RectCollider | CircleCollider | null = null;
     public color: Color = new Color(255, 255, 255, 0);
-    private core: Core;
 
     /**
      * Constructor
      */
     constructor() {
         super();
-        this.core = IOC.makeSingleton('Core');
 
         // Load a scene
         this.core.loadSceneAndRun('scene1');

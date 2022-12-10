@@ -25,6 +25,7 @@ import SpriteObject from "new-engine/build/Objects/SpriteObject";
 import Time from "new-engine/build/Engine/Time";
 
 export default class extends SpriteObject {
+    
     public width: number = 64;
     public height: number = 64;
     public angle: number = 0;
