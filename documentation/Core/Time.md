@@ -24,7 +24,7 @@ import Vector2 from "new-engine/build/Engine/Vector2";
 import SpriteObject from "new-engine/build/Objects/SpriteObject";
 import Time from "new-engine/build/Engine/Time";
 
-export default class extends SpriteObject {
+export default class Box extends SpriteObject {
     
     public width: number = 64;
     public height: number = 64;
