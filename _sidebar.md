@@ -4,3 +4,5 @@
     - [Camera](documentation/Core/Camera.md)
 - Objects
     - [TextObject](documentation/Objects/TextObject.md)
+- Other
+    - [Tooltip](documentation/Other/Tooltip.md)
