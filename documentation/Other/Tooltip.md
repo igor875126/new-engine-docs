@@ -1,32 +1,22 @@
 # Tooltip
+## Description
 Tooltips, are very important for games, `new-engine` supports them out of the box.
 
-## Available methods
-### setText
-```typescript
-/**
- * Set text
- */
-public setText(text: string, defaultFontSize: number, defaultTextColor: string): void;
-```
+---
 
-### setPosition
-```typescript
-/**
- * Set tooltips position
- */
-public setPosition(position: Vector2): void;
-```
+## Methods
+##### `public setText(text: string, defaultFontSize: number, defaultTextColor: string): void`
+Set text
 
-### destroy
-```typescript
-/**
- * Destroy tooltip
- */
-public destroy(): void 
-```
+##### `public setPosition(position: Vector2): void`
+Set tooltip position
 
-## Example
+##### `public destroy(): void`
+Destroy tooltip
+
+---
+
+# Examples
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import Color from "new-engine/build/Engine/Color";

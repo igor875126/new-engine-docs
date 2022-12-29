@@ -10,7 +10,7 @@ Sometimes you dont wan't that some objects exists in virtual space and moves whe
 ---
 
 ## Methods
-##### `shake(durationInMs: number, intensity: number): Promise<void>`
+##### `public async shake(durationInMs: number, intensity: number): Promise<void>`
 Shake camera. Use this method if you want to shake the camera, e.g. if explosion happened. Please note, that camera "shake" effect will only occur for game objects where `unaffectedByCamera` is set to `false`
 
 ```typescript

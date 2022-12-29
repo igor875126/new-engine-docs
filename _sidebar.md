@@ -2,6 +2,7 @@
     - [Time](documentation/Core/Time.md)
     - [Event System](documentation/Core/EventSystem.md)
     - [Camera](documentation/Core/Camera.md)
+    - [Scene](documentation/Core/Scene.md)
 - Objects
     - [TextObject](documentation/Objects/TextObject.md)
 - Other

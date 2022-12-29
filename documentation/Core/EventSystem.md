@@ -1,12 +1,24 @@
 # Event System
+## Description
 Provides a very simple functionality to use events in your game. The idea behind event manager is very simple:
 - Somebody wants to listen for a event (that means wants to deal any action when this event happens)
 - Somebody dispatches an event (that means tells to event manager that this event has happened)
 
-> Please note, when `gameObject` gets destroyed, all it's event listeners get's also destroyed. We do not want that `dead` gameObject makes some stuff.
+Please note, when `gameObject` gets destroyed, all it's event listeners get's also destroyed. We do not want that `dead` gameObject makes some stuff.
 
-## Example
-Object which subscribes to an event
+---
+
+## Methods
+##### `public listenForEvent(gameObject: GameObject, eventName: string, callback: (data: any) => void): void`
+Use this method to "subscribe" for an event.
+
+##### `public dispatchEvent(eventName: string, data: any): void`
+Use this method to tell to `EventManager` that an event has happened, and it should tell it to all it's listeners!
+
+---
+
+# Examples
+## Object which subscribes to an event
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import Color from "new-engine/build/Engine/Color";
@@ -40,7 +52,7 @@ export default class Box extends SpriteObject {
 }
 ```
 
-Object which dispatches an event
+## Object which dispatches an event
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import RectCollider from "new-engine/build/Engine/RectCollider";
@@ -65,11 +77,3 @@ export default class ThisObjectWillDispatchEvent extends EmptyObject {
     }
 }
 ```
-
-
-## Available methods
-##### `listenForEvent(gameObject: GameObject, eventName: string, callback: (data: any) => void): void`
-Use this method to "subscribe" for an event.
-
-##### `dispatchEvent(eventName: string, data: any): void`
-Use this method to tell to `EventManager` that an event has happened, and it should tell it to all it's listeners!

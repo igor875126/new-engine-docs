@@ -1,7 +1,20 @@
 # Time
+## Description
 Provides an interface to get time information.
 
-## Example
+---
+
+## Properties
+##### `deltaTime`
+The interval in milliseconds from the last frame to the current one.
+
+##### `timestamp`
+The time since this game has started in milliseconds.
+
+---
+
+# Examples
+## How to use `deltaTime`
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import Color from "new-engine/build/Engine/Color";
@@ -31,10 +44,3 @@ export default class Box extends SpriteObject {
     }
 }
 ```
-
-## Available properties
-### `deltaTime`
-The interval in milliseconds from the last frame to the current one.
-
-### `timestamp`
-The time since this game has started in milliseconds.
