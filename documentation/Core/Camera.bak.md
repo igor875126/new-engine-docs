@@ -1,27 +1,10 @@
 # Camera
-## Description
-`new-engine` has built in camera. Which is always enabled. `Camera` like every game object in the scene has a `position` property which can be accessed from anywhere from you game, for example you can control this `position` property from you player controller.
+`new-engine` has built in camera. Which is always enabled.
 
----
-
-## How to make objects static, e.g. `HUD`
-Sometimes you dont wan't that some objects exists in virtual space and moves when the camera moves. A good example for that are `HUD` elements. When you create a `GameObject` of any type you can mark it as `unaffectedByCamera`, in this case it will be literally unaffected by camera.
-
----
-
-## Methods
-##### `shake(durationInMs: number, intensity: number): Promise<void>`
-Shake camera. Use this method if you want to shake the camera, e.g. if explosion happened. Please note, that camera "shake" effect will only occur for game objects where `unaffectedByCamera` is set to `false`
-
-```typescript
-// Shake camera for 500ms with intensity 5
-this.core.camera.shake(500, 5);
-```
-
----
-
-# Examples
 ## How to control the camera
+`Camera` like every game object in the scene has a `position` property which can be accessed from anywhere from you game, for example you can control this `position` property from you player controller.
+
+### Example
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import RectCollider from "new-engine/build/Engine/RectCollider";
@@ -55,4 +38,18 @@ export default class CameraController extends EmptyObject {
         }
     }
 }
+```
+
+## How to make objects static, e.g. `HUD`
+Sometimes you dont wan't that some objects exists in virtual space and moves when the camera moves. A good example for that are `HUD` elements. When you create a `GameObject` of any type you can mark it as `unaffectedByCamera`, in this case it will be literally unaffected by camera.
+
+## Available methods
+##### `shake(durationInMs: number, intensity: number): Promise<void>`
+Shake camera. Use this method if you want to shake the camera, e.g. if explosion happened.
+> Please note, that camera "shake" effect will only occur for game objects where `unaffectedByCamera` is set to `false`
+
+### Example
+```typescript
+// Shake camera for 500ms with intensity 5
+this.core.camera.shake(500, 5);
 ```
