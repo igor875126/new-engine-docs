@@ -42,3 +42,14 @@ export default class CameraController extends EmptyObject {
 
 ## How to make objects static, e.g. `HUD`
 Sometimes you dont wan't that some objects exists in virtual space and moves when the camera moves. A good example for that are `HUD` elements. When you create a `GameObject` of any type you can mark it as `unaffectedByCamera`, in this case it will be literally unaffected by camera.
+
+## Available methods
+### `shake(durationInMs: number, intensity: number): Promise<void>`
+Shake camera. Use this method if you want to shake the camera, e.g. if explosion happened.
+> Please note, that camera "shake" effect will only occur for game objects where `unaffectedByCamera` is set to `false`
+
+#### Example
+```typescript
+// Shake camera for 500ms with intensity 5
+this.core.camera.shake(500, 5);
+```
