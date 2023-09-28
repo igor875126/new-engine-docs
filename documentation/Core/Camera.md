@@ -1,27 +1,31 @@
 # Camera
-## Description
-`new-engine` has built in camera. Which is always enabled. `Camera` like every game object in the scene has a `position` property which can be accessed from anywhere from you game, for example you can control this `position` property from you player controller.
+
+## Overview
+The `new-engine` incorporates a built-in camera feature which remains active by default. Similar to other game objects in a scene, the `Camera` possesses a `position` property, which can be accessed universally within your game. For instance, you can manipulate the `position` property through your player controller.
 
 ---
 
-## How to make objects static, e.g. `HUD`
-Sometimes you dont wan't that some objects exists in virtual space and moves when the camera moves. A good example for that are `HUD` elements. When you create a `GameObject` of any type you can mark it as `unaffectedByCamera`, in this case it will be literally unaffected by camera.
+## Static Objects Implementation: e.g., `HUD`
+There may be instances where you prefer certain objects to retain their position in the virtual space, unaffected by camera movements—`HUD` elements serve as a prime example. Upon creating a `GameObject` of any sort, you have the option to flag it as `unaffectedByCamera`. When marked, the object remains static, undisturbed by any camera activity.
 
 ---
 
 ## Methods
-##### `public async shake(durationInMs: number, intensity: number): Promise<void>`
-Shake camera. Use this method if you want to shake the camera, e.g. if explosion happened. Please note, that camera "shake" effect will only occur for game objects where `unaffectedByCamera` is set to `false`
+
+### `public async shake(durationInMs: number, intensity: number): Promise<void>`
+Utilize this method to induce a camera shake, for instance, in reaction to an explosion within the game. Note that the camera "shake" effect applies solely to game objects that have `unaffectedByCamera` set to `false`.
 
 ```typescript
-// Shake camera for 500ms with intensity 5
+// Trigger a 500ms camera shake with an intensity level of 5
 this.core.camera.shake(500, 5);
 ```
 
 ---
 
-# Examples
-## How to control the camera
+## Examples
+
+### Camera Control
+
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
 import RectCollider from "new-engine/build/Engine/RectCollider";
