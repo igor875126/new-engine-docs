@@ -1,33 +1,47 @@
-# Tooltip
-## Description
-Tooltips, are very important for games, `new-engine` supports them out of the box.
+# Tooltip Module
+The `Tooltip` module provides a straightforward way to implement interactive tooltips in games using the `new-engine`. Tooltips can greatly enhance the user experience by offering additional information or guidance when the user hovers over certain elements.
 
 ---
 
-## Methods
-##### `public setText(text: string, defaultFontSize: number, defaultTextColor: string): void`
-Set text
+## Method Summary
 
-##### `public setPosition(position: Vector2): void`
-Set tooltip position
-
-##### `public destroy(): void`
-Destroy tooltip
+- **setText(text: string, defaultFontSize: number, defaultTextColor: string): void** - Defines the text, font size, and color for the tooltip.
+- **setPosition(position: Vector2): void** - Sets the position of the tooltip on the screen.
+- **destroy(): void** - Destroys the tooltip instance, removing it from the screen.
 
 ---
 
-# Examples
+## Method Details
+
+### `setText(text: string, defaultFontSize: number, defaultTextColor: string): void`
+This method sets the text to be displayed in the tooltip, along with the default font size and text color.
+
+### `setPosition(position: Vector2): void`
+Specifies the position where the tooltip will be displayed on the screen.
+
+### `destroy(): void`
+Destroys the tooltip instance, effectively removing it from the display.
+
+---
+
+## Usage Examples
+
 ```typescript
-import CircleCollider from "new-engine/build/Engine/CircleCollider";
-import Color from "new-engine/build/Engine/Color";
-import RectCollider from "new-engine/build/Engine/RectCollider";
-import Shadow from "new-engine/build/Engine/Shadow";
-import Sprite from "new-engine/build/Engine/Sprite";
-import Vector2 from "new-engine/build/Engine/Vector2";
-import SpriteObject from "new-engine/build/Objects/SpriteObject";
-import Tooltip from "new-engine/build/Tooltip/Tooltip";
+// Import required classes from the new-engine
+import {
+    CircleCollider,
+    Color,
+    RectCollider,
+    Shadow,
+    Sprite,
+    Vector2,
+    SpriteObject,
+    Tooltip
+} from "new-engine";
 
+// Define a new class named Information
 export default class Information extends SpriteObject {
+    // Class properties
     public width: number = 40;
     public height: number = 40;
     public angle: number = 0;
@@ -41,19 +55,25 @@ export default class Information extends SpriteObject {
     public tooltip: Tooltip;
 
     /**
-     * On mouse over
+     * Method triggered when mouse hovers over the object
      */
     public onMouseOver(): void {
+        // Create a new tooltip instance
         this.tooltip = new Tooltip(30, 12, Color.hexToRgb('#2d250e'));
+        // Set the text, font size, and color for the tooltip
         this.tooltip.setText(`Hello dear <font color="#aa12cc" size="30">world</font><br><br>it's me <font color="#44ffcc" size="14">mario</font> i am writing to you<br>price<br><font size="15">How about</font> you?`, 12, '#aaffcc');
+        // Set the tooltip position
         this.tooltip.setPosition(this.position.subtract(new Vector2(0, 80)));
     }
 
     /**
-     * On mouse over
+     * Method triggered when mouse exits the hover area of the object
      */
     public onMouseOut(): void {
+        // Destroy the tooltip instance
         this.tooltip.destroy();
     }
 }
 ```
+
+In the code snippet above, we demonstrate how to implement a tooltip that appears when the user hovers over a certain object, and disappears when the user moves the cursor away from the object.
