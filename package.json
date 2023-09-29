@@ -1,0 +1,22 @@
+{
+  "name": "new-engine-docs",
+  "version": "1.0.0",
+  "description": "Documentation for the new-engine game engine",
+  "main": "index.html",
+  "scripts": {
+    "watch": "snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor875126/new-engine-docs.git"
+  },
+  "author": "Igor Kov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igor875126/new-engine-docs/issues"
+  },
+  "homepage": "https://github.com/igor875126/new-engine-docs#readme",
+  "dependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
