@@ -1,9 +1,11 @@
-# Collision Detection
+# *Collision Detection*
 
 ## Overview
 Collision detection is a crucial aspect of game development, allowing for the recognition and response to interactions between objects within the game environment. The current implementation within our engine provides a foundation for interaction with mouse or touch events, enabling a certain level of interactivity and responsiveness in the game. While the system does not support object-to-object collision detection at the moment, it paves the way for such feature additions in future iterations.
 
 The architecture accommodates different collider shapes such as Circle Collider and Rectangle Collider, which can be associated with game objects to denote their interactive regions.
+
+---
 
 ## Collider Types
 
@@ -92,7 +94,7 @@ class MyGameObject extends GameObject {
 }
 ```
 
-# How to use `Collision Detection`
+## How to use
 
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";

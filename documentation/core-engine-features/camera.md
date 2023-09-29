@@ -1,7 +1,9 @@
-# Camera
+# *Camera*
 
 ## Overview
 The `Camera` class acts as an integral component within a game or application's rendering system, managing the in-game camera's position dynamically. Through its utility, the class provides functionality for tracking and offsetting the camera's position concerning rendering. Moreover, it hosts a shaking effect feature which significantly enhances the visual dynamism in the gameplay or visual presentation.
+
+---
 
 ## Position Management
 At the heart of the Camera class lies the management of the camera's position within the game, enabling precise rendering and interactions.
@@ -37,9 +39,7 @@ await this.core.camera.shake(500, 5);
 ## Static Objects Implementation
 There may be instances where you prefer certain objects to retain their position in the virtual space, unaffected by camera movements. For example`HUD` elements serve as a prime example. Upon creating a `GameObject` of any sort, you have the option to flag it as `unaffectedByCamera`. When marked, the object remains static, undisturbed by any camera activity.
 
-# How to use `Camera`
-
-### CameraController
+## How to use
 
 ```typescript
 import CircleCollider from "new-engine/build/Engine/CircleCollider";
