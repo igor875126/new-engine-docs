@@ -7,13 +7,5 @@
     - [Color](documentation/core-engine-features/color.md)
     - [Event Manager](documentation/core-engine-features/event-manager.md)
     - [GameObjects Manager](documentation/core-engine-features/gameobjects-manager.md)
-
-<!-- - Core
-    - [Time](documentation/Core/Time.md)
-    - [Event System](documentation/Core/EventSystem.md)
-    - [Camera](documentation/Core/Camera.md)
-    - [Scene](documentation/Core/Scene.md)
-- Objects
-    - [TextObject](documentation/Objects/TextObject.md)
-- Other
-    - [Tooltip](documentation/Other/Tooltip.md) -->
+    - [Input](documentation/core-engine-features/input.md)
+    - [Locale](documentation/core-engine-features/locale.md)
