@@ -1,22 +1,23 @@
-# About
-`new-engine` is a HTML5 graphics engine which is fully written in TypeScript.
+# A HTML5 Graphics Engine
+`new-engine` is a robust HTML5 graphics engine meticulously crafted using TypeScript.
 
-## Documentation
-Documentation is available at https://igor875126.github.io/new-engine-docs
-
-## Installation
-Install `new-engine-cli` via `npm` globally.
+### Installation
+Install the command line interface to get started:
 
 ```sh
-npm install new-engine-cli -g
+npm install -g new-engine-cli
 ```
 
-## Usage
-Use `new` to generate your game project.
+## Creating a New Project
+
+Generate your game project effortlessly with a simple command:
 
 ```sh
-new-engine new <name>
+new-engine new <project-name>
 ```
+
+Replace `<project-name>` with your desired project name.
 
 ## License
-[MIT](LICENSE.md)
+
+This project is licensed under the [MIT License](LICENSE.md).

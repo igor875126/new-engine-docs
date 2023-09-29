@@ -86,7 +86,7 @@ public getSpriteForDrawing(): Sprite | null;
 const sprite = this.animator.getSpriteForDrawing();
 ```
 
-## How to use it
+## How to use `Animator`
 
 ### Animation Control
 
