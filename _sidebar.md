@@ -9,3 +9,4 @@
     - [GameObjects Manager](documentation/core-engine-features/gameobjects-manager.md)
     - [Input](documentation/core-engine-features/input.md)
     - [Locale](documentation/core-engine-features/locale.md)
+    - [Logger](documentation/core-engine-features/logger.md)
